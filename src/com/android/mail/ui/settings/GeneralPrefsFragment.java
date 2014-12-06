@@ -144,6 +144,7 @@ public class GeneralPrefsFragment extends MailPreferenceFragment
                     AUTO_ADVANCE_VALUES[mAutoAdvance.findIndexOfValue((String) newValue)];
             mMailPrefs.setAutoAdvanceMode(prefsAutoAdvanceMode);
         } else if (!PreferenceKeys.CONVERSATION_LIST_SWIPE.equals(key) &&
+                !PreferenceKeys.ENABLE_BYPASS_POLICY_REQUIREMENTS.equals(key) &&
                 !PreferenceKeys.SHOW_SENDER_IMAGES.equals(key) &&
                 !PreferenceKeys.DEFAULT_REPLY_ALL.equals(key) &&
                 !PreferenceKeys.CONVERSATION_OVERVIEW_MODE.equals(key) &&
@@ -280,6 +281,7 @@ public class GeneralPrefsFragment extends MailPreferenceFragment
         listenForPreferenceChange(
                 PreferenceKeys.REMOVAL_ACTION,
                 PreferenceKeys.CONVERSATION_LIST_SWIPE,
+                PreferenceKeys.ENABLE_BYPASS_POLICY_REQUIREMENTS,
                 PreferenceKeys.SHOW_SENDER_IMAGES,
                 PreferenceKeys.DEFAULT_REPLY_ALL,
                 PreferenceKeys.CONVERSATION_OVERVIEW_MODE,

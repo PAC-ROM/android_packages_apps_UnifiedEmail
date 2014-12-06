@@ -69,6 +69,10 @@ public final class MailPrefs extends VersionedPrefs {
          * A boolean that, if <code>true</code>, means we should allow conversation list swiping
          */
         public static final String CONVERSATION_LIST_SWIPE = "conversation-list-swipe";
+        /**
+         * A boolean that, if <code>true</code>, means we should bypass policy requiremnts
+         */
+        public static final String ENABLE_BYPASS_POLICY_REQUIREMENTS = "enable_bypass_policy_requirements";
 
         /** A string indicating the user's removal action preference. */
         public static final String REMOVAL_ACTION = "removal-action";
@@ -145,6 +149,7 @@ public final class MailPrefs extends VersionedPrefs {
                 new ImmutableSet.Builder<String>()
                 .add(DEFAULT_REPLY_ALL)
                 .add(CONVERSATION_LIST_SWIPE)
+                .add(ENABLE_BYPASS_POLICY_REQUIREMENTS)
                 .add(REMOVAL_ACTION)
                 .add(DISPLAY_IMAGES)
                 .add(DISPLAY_IMAGES_PATTERNS)
@@ -303,6 +308,19 @@ public final class MailPrefs extends VersionedPrefs {
 
     public void setConversationListSwipeEnabled(final boolean enabled) {
         getEditor().putBoolean(PreferenceKeys.CONVERSATION_LIST_SWIPE, enabled).apply();
+        notifyBackupPreferenceChanged();
+    }
+
+    /**
+     * Gets a boolean indicating whether policy bypass is enabled.
+     */
+    public boolean getEnableBypassPolicyRequirements() {
+        final SharedPreferences sharedPreferences = getSharedPreferences();
+        return sharedPreferences.getBoolean(PreferenceKeys.ENABLE_BYPASS_POLICY_REQUIREMENTS, false);
+    }
+
+    public void setEnableBypassPolicyRequirements(boolean enabled) {
+        getEditor().putBoolean(PreferenceKeys.ENABLE_BYPASS_POLICY_REQUIREMENTS, enabled).apply();
         notifyBackupPreferenceChanged();
     }
 
