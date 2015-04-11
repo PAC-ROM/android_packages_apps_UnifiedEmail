@@ -16,6 +16,6 @@
   limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="preferences_enable_bypass_policy_requirements_summary">Ignoriere Richtlinie welche für den Email Service benötigt wird, zum Beispiel die Erlaubnis um drahtlos Daten zu löschen.</string>
-  <string name="preferences_enable_bypass_policy_requirements_title">Bypass-Richtlinien-Anforderungen</string>
+  <string name="preferences_enable_bypass_policy_requirements_summary">Umgehe die Richtlinie welche für den Email Service benötigt wird, zum Beispiel die Erlaubnis um drahtlos Daten zu löschen.</string>
+  <string name="preferences_enable_bypass_policy_requirements_title">Umgehe-Richtlinien-Anforderungen</string>
 </resources>
