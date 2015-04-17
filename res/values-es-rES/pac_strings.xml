@@ -16,6 +16,6 @@
   limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="preferences_enable_bypass_policy_requirements_summary">Ignorar la política requerida por servidores de correo electrónico, por ejemplo, para permitir borrado de datos remotos.</string>
-  <string name="preferences_enable_bypass_policy_requirements_title">Eludir los requisitos de la Política</string>
+  <string name="preferences_enable_bypass_policy_requirements_summary">Ignorar la política requerida por servidores de correo electrónico, por ejemplo, para permitir el borrado de datos remotamente</string>
+  <string name="preferences_enable_bypass_policy_requirements_title">Eludir los requisitos de la política</string>
 </resources>
